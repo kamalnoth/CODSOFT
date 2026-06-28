@@ -1,0 +1,31 @@
+print("*"*35)
+print("simple calculater")
+print("*"*35)
+
+while True:
+    n1=float(input("enter value 1:"))
+    n2=float(input("enter value 2:"))
+    op=input("enter the operation you need to perform (+,-,*,/):")
+    if (op=="+"):
+        print("the sum of two numbers is:",n1+n2)
+        
+    elif(op=="-"):
+        print("the difference of two numbers is:",n1-n2)
+
+    elif(op=="*"):
+        print("the product of two numbers is:",n1*n2)
+
+    elif(op=="/"):
+        if n2==0:
+            print("error cannot divide by zero!")
+        else:
+            print("the division of two numbers is:",n1/n2)
+
+    else:
+        print("invalid operator input")
+
+    choice=input("want to calculate again?!(yes/no):")
+    if choice.lower()!="yes":
+        break
+print("thankyouu")
+print("*"*35)
