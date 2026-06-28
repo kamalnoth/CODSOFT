@@ -1,0 +1,80 @@
+contact=[]
+
+while True:
+    print()
+    print("1.add contact")
+    print("2.view contact")
+    print("3.search contact")
+    print("4.update contact")
+    print("5.delete contact")
+    print("6.exit")
+    print()
+    choice=input("enter your choice:")
+    if choice=="1":
+        
+        name=input("enter contact name:")
+        number=input("enter phone number:")
+
+        while (len(number)!=10 or not number.isdigit()):
+             print("entered number is invalid")
+             number=input("please enter 10 digit phone number:")
+             if (len(number)==10 and number.isdigit()):
+                 break
+
+        email=input("enter email id:")
+        address=input("enter your city:")
+        l1=[name,number,email,address]
+        contact.append(l1)
+        print("added!!")
+    elif choice=="2":
+        if contact:
+            for i in contact:
+                 print(i)
+        else:
+            print("no contacts")
+
+            
+    elif choice=="3":
+        n=input("enter the name of the contact to be searched:")
+        flag=0
+        for i in contact:
+            if i[0].lower()==n.lower():
+                print(i)
+                flag=1
+                
+        if flag==0:
+            print("no contacts found")
+
+    elif choice=="4":
+        n1=input("enter the name of the contact to be updated:")
+        flag=0
+        for i in contact:
+            if i[0].lower()==n1.lower():
+                flag=1
+                i[1]=input("enter new phone number:")
+                while (len(i[1])!=10 or not i[1].isdigit()):
+                     print("entered number is invalid")
+                     i[1]=input("please enter 10 digit phone number:")
+                     if (len(i[1])==10 and i[1].isdigit()):
+                         break
+                i[2]=input("enter new email id:")
+                i[3]=input("enter new city:")
+        print("updated" if flag else "no contact found")
+
+    elif choice=="5":
+         n2=input("enter the name of the contact to be deleted:")
+         flag=0
+         for i in contact:
+             if i[0].lower()==n2.lower():
+                 flag=1
+                 contact.remove(i)
+         print("deleted" if flag else "no contact found")      
+    elif choice=="6":
+        print("exit done")
+        break
+
+    else:
+        print("invalid input")
+
+
+    
