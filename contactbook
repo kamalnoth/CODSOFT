@@ -1,7 +1,11 @@
+'''
+contact book program
+'''
 contact=[]
 
 while True:
     print()
+    print("contact book")
     print("1.add contact")
     print("2.view contact")
     print("3.search contact")
@@ -76,5 +80,3 @@ while True:
     else:
         print("invalid input")
 
-
-    
