@@ -1,4 +1,7 @@
- print("**************************************")
+'''
+rock paper scissors program
+'''
+print("**************************************")
 print("Rock paper scissors program")
 import random as r
 
@@ -53,3 +56,4 @@ elif (user>compscore):
     print("nice game buddy!!,we won:)")
 else:
     print("good game,we lost and losing is also a part of the game")
+
