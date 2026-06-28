@@ -1,3 +1,6 @@
+'''
+calculater program
+'''
 print("*"*35)
 print("simple calculater")
 print("*"*35)
