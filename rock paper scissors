@@ -1,0 +1,55 @@
+ print("**************************************")
+print("Rock paper scissors program")
+import random as r
+
+computer=["rock","paper","scissors"]
+user=0
+compscore=0
+flag="yes"
+while (flag.lower()=="yes"):
+    print()
+    ch=input("enter rock-paper-scissors:").lower()
+    comp=computer[r.randint(0,2)]
+    print("user's choice:",ch)
+    print("computer's choice:",comp)
+    if (ch==comp):
+        print("its a tie")
+
+    elif (ch=="rock" and comp=="paper"):
+        print("user loses")
+        compscore+=1
+
+    elif (ch=="paper" and comp=="rock"):
+         print("user wins")
+         user+=1
+
+    elif (ch=="rock" and comp=="scissors"):
+        print("user wins")
+        user+=1
+
+    elif (ch=="scissors" and comp=="rock"):
+        print("user loses")
+        compscore+=1
+        
+    elif (ch=="scissors" and comp=="paper"):
+        print("user wins")
+        user+=1
+
+    elif (ch=="paper" and comp=="scissors"):
+        print("user loses")
+        compscore+=1
+
+    else:
+        print("invalid input!")
+    print("userscore:",user)
+    print("computerscore:",compscore)   
+
+    print()
+    flag=input("another round?(yes/no):")
+print("**************************************")
+if (user==compscore):
+    print("well played buddy!,its a tie")
+elif (user>compscore):
+    print("nice game buddy!!,we won:)")
+else:
+    print("good game,we lost and losing is also a part of the game")
